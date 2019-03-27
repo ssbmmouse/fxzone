@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorFilterToggle : MonoBehaviour
+public class ColorFilterToggle : MonoBehaviour  // Determines whether the user has enabled the color filter, and 
+                                                // displays green if it is or red if not
 {
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (MP4Player.colorFilter == false) {
+        if (MP4Player.colorFilter == false) { 
             GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (MP4Player.colorFilter == true) {
@@ -20,7 +20,7 @@ public class ColorFilterToggle : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    void OnMouseDown() // This changes the current state of the color filter toggle on a mouseclick on the attached game object
     {
         if (MP4Player.colorFilter == false) {
             MP4Player.colorFilter = true;

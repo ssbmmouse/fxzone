@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Randomizer : MonoBehaviour
+public class Randomizer : MonoBehaviour // Enables or disables the randomize feature and displays to the user whether or not it is enabled
 {
     
     void Start()
@@ -10,10 +10,10 @@ public class Randomizer : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (MP4Player.randomize == false) {
+        // Will show as red if disabled and green if enabled
+        if (MP4Player.randomize == false) { 
             GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (MP4Player.randomize == true) {
@@ -21,7 +21,7 @@ public class Randomizer : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    void OnMouseDown() // Clicking on the gameobject this is attached to will change the setting of whether to randomize or not
     {
         if (MP4Player.randomize == false) {
             MP4Player.randomize = true;

@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public static bool start;
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (start == true){
+        if (start == true) {    // Once the bool "start" becomes true, this will immediately change the scene
+                                // The next scene will be the video player, so this basically starts the program
             SceneManager.LoadScene(1);
         }
     }
